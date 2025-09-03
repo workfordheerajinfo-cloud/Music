@@ -1,0 +1,284 @@
+*{
+    font-family: var(--font-family);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    height: 108px;
+}
+.header-wrapper{
+    display: flex;
+    padding: 32px 16px;
+    max-width: var(--max-width);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.logo{
+    height: 42px;
+}
+.nav-bar{
+    height: 42px;
+    display: flex;
+}
+
+.nav-menu{
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+.nav-menu li{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    
+}
+.nav-menu li a{
+   font-family: var(--font-family);
+   text-decoration: none;
+   color: #3B3C4A;
+    /* whenever you want to add transition , you add it to parent class and not the pseudo */
+    transition: color 0.5s;
+ 
+}
+.nav-menu li a:hover{
+   color: var(--primary-color);
+    
+}
+.Search-input{
+    background-color: #f4f4f5;
+    min-width: 166px;
+    min-height: 36px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    text-indent: 20px;
+
+}
+
+/* here we will target the search input class once again but this time we are going to target the pseudo element of the placeholder */
+.Search-input::placeholder{
+    font-size: 0.875rem;
+    color: #A1A1AA;
+    line-height: 20px;
+
+}
+/* again we'll use the search input class and this time we'll focus on a pseudo class of focus because we want to change the properties of the focus */
+
+.Search-input:focus{
+    border: 1px solid var(--primary-color);
+    outline: none;
+    color: #3B3C4A;
+
+}
+.search-container{
+    /* I'm going to set the position to relative, only when the search container would have a position of relative would I be able to pick up the search icon and give it a position which is absolute.. but this absolute position would now work relatively to the search container, otherwise it would position absolutely to the body and i don't want that.. that's the reason i'm giving it a position of relative.. */
+    position: relative;
+}
+.search-icon{
+    /* now this icon needs to have a position of absolute.. and by just making these two changes let's look how the icon looks like */
+    position: absolute;
+   /* and in the beginning let's just apply a right offset of eight pixels and also a top offset of eight pixels */
+    right: 8px;
+    top: 6px;
+
+    /* but what if i click on the search icon , u'll see that it doesn't trigger the focus on the input box, that's because the search icon is coming in between the input box and my mouse click , there is a way to avoid this as well.. */
+    pointer-events: none;
+
+    /* but i want to work on this header on the mobile device as well..so let's just open a mobile device preview and you'll see that the header doesn't look good on the mobile.. */
+}
+
+/* Hero section Starts here...so all the style related to hero section would be added here...  */
+.main-section{
+    padding: 16px;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.hero-section{
+    position: relative;
+
+}
+
+.hero-image{
+    /* background images are only visible when element itself has some height, so if the dive doesn't have a height , background image would not be visible... */
+    min-height: 500px;
+    background-image: url("./Image/Image.png");  
+    /* fetch the images directory first.. so I'm going ahead nd select the image directory and within image we can select Image.png */
+    background-repeat: no-repeat;
+    /* i don't want the image to repeat, so I'm going to set background repeat to no repeat */
+    background-size: cover;
+    /* also as far as the background size is concerned i want the background size to cover the entire container, so i'll use cover as the background size.. */
+
+}
+.hero-description{
+    position: absolute;
+    top: 280px;
+    left: 64px;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 24px -6px rgba(24, 26, 42, 0.12), inset 0 0 0 1px #E8E8EA;
+    /* for adding the stroke we are going to add inset to the box shadow  there is no offset , no spread , no y offset, so x offset is zero , y offset is zero , blur is zero, now instead of the spread we are going to add the weight, in this case which is one pixels and then we are going to add the color  */
+
+    padding: 40px;
+}.hero-badge{
+    background-color: var(--primary-color);
+    font-size: 0.875rem;
+    line-height: 1.3;
+    padding: 8px 12px;
+    border-radius: 0.5rem;
+    
+    
+
+}
+.badge-container{
+    min-height: 28px;
+    margin-bottom: 16px;
+
+}
+.article-detail h1 a{
+    text-decoration: none;
+    font-weight: 600;
+    /* how to calculate 36 pixels into rem..  is that you take 36 and divide 36 by 16... */
+    font-size: 2.25rem;
+    line-height: 40px;
+    color: var(---heading-font-color);
+}
+.author-section{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 16px;
+    color: #97989F;
+    margin-top: 24px;
+}
+.author-section img{
+    width: 36px;
+    height: auto;
+}
+
+/* we have this hero section .. this entire section which contains the image and now we want to set this card relative to the hero section .. this means this hero section needs to have a position of relative and this card needs to have an absolute position so that this can be placed relatively to the outer section.. once this card has an absolute position, i can give the left offset , which is this offset over here as well as the top offset and position it relative to this particular outer section , so that's the strategy that we're going to adopt.. and let's see what is this left offset value and what is this top offset value... in order to see that let's just select this card here and let's press alt.. */
+
+/* styles for the latest post... */
+.blog-section{
+    margin-top: 10rem;
+
+}
+
+
+/* so if you look at the post section there's a heading and then there is an article now if u are able to create one article , the rest of the articles are actually a replica of this article.. */
+.blog-section h1{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.posts{
+    margin-top: 32px;
+    display: flex;
+    /* The flex-wrap property controls whether the flex items are forced into a single line or can wrap onto multiple lines. */
+    flex-wrap: wrap;
+    /* now I'm not using column gap because a row gap will also need to exist , so If i zoom out a column gap exists here and also a row gap has to be present.. so that's the reason I'm adding 20 pixel gap... */
+    gap: 20px;
+}
+.single-post{
+    /* The flex-basis property in CSS is used inside a flex container to define the initial size of a flex item before any available space is distributed according to flex-grow or taken away with flex-shrink */
+    flex-basis: 29.5%;
+    /* setting flex grow equal to one means that all the posts will grow in the ratio of one is to one.. so they would all occupy equal space.. */
+    /* flex-grow: 1; */
+    padding: 16px;
+    border: 1px solid #E8E8EA;
+    border-radius: 0.75rem;
+    /* if refactoring is a word that you've heard for the first time , it jsut means that you optimize your code later by making some minor changes to your code.. */
+
+}
+.single-post img{
+    width: 100%;
+    border-radius: .6rem;
+}
+.single-post .article-detail{
+    /* so top and bottom padding is 24 pixels whereas left and right padding is 8 pixels.. */
+    padding: 24px 8px;
+}
+.single-post h2 a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #181A2A;
+
+}
+.single-post .hero-badge{
+    background-color: rgba(75, 107, 251, .05);
+    color: var(--primary-color);
+
+}
+.single-post .author-section img{
+    width: 36px;
+    height: auto;
+
+}
+.view-all{
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+
+}
+.view-all a{
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #696A75;
+    border: 1px solid #696A75;
+    border-radius: 0.5rem;
+    transition: background-color, color , 0.5sec;
+}
+.view-all a:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+/* footer syle */
+.footer{
+    background-color: #f6f6f7;
+    padding: 32px;
+
+}
+.footer-wrapper{
+    display: flex;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 16px;
+    justify-content:flex-end;
+}
+.footer-link{
+    display: flex;
+    
+
+
+
+
+}
+.footer-link li{
+    padding: 0 16px;
+    border-right: 1px solid #c6c6c6;
+
+}
+
+.footer-link li:last-child{
+    padding: 0 0 0 16px;
+    border-right: none;
+}
+
+.footer-link li a{
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #3B3C4A;
+}
+.footer-link li a:hover{
+    color: var(--primary-color);
+    transition: 0.5sec;
+}
+

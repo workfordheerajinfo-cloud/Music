@@ -1,0 +1,208 @@
+   *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+    font-family: serif;
+   }
+  
+  
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    
+    
+    
+}
+#header{
+    height: 10%;
+    width: 100%;
+    background-color: whitesmoke;
+    
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+#fakeheader{
+    height: 10%;
+    width: 100%;
+}
+#logo{
+    height: 70%;
+     /* margin-left: 10px; 
+    padding: 1px;  */
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text{
+    color: forestgreen;
+    /* margin: 10px; */
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.text:hover{
+    color: blue;
+}
+#contactDetails{
+    color: forestgreen;
+    font-size: medium;
+    font-weight: bold;
+    /* margin: 20px;
+    margin-left: 200px; */
+    
+
+}
+#contactDetails:hover{
+    color: blue;
+    cursor: pointer;
+    
+}
+.icon{
+    /* margin-left: 20px; */
+    
+    padding: 10px;
+    border-radius: 50%;
+
+
+}
+.icon:hover{
+    background-color: lightblue;
+    color: blue;
+   
+}
+#login{
+    /* margin-left: 20px; */
+    display: flex;
+    
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    
+    
+
+}
+#login:hover{
+    background-color: lightblue;
+    color: blue;
+    cursor: pointer;
+}
+#try{
+    /* margin-left: 30px; */
+    background-color: green;
+    font-size: larger;
+    /* margin-right: 30px; */
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+#try:hover{
+    background-color: rgb(1, 44, 1);
+    cursor: pointer;
+}
+#page1{
+    height: 90%;
+    width: 100%;
+    background-color: wheat;
+    
+}
+#strip{
+    width: 100%;
+    height: 8%;
+    background-color: rgb(9, 9, 75);
+    color: white;
+     padding: 10px;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+
+
+    
+}
+#content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+
+}
+#box1{
+    height: 90%;
+    width: 47%;
+    background-color: whitesmoke;
+    margin-left: 10px;
+    
+}
+#box2{
+    height: 90%;
+    width: 50%;
+    background-color: gray;
+}
+#heading{
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    color: blue;
+    padding: 10px;
+    font-weight: bold;
+    background-color: whitesmoke;
+
+
+    
+
+}
+#btns{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    
+
+
+
+}
+#btns1{
+    width: 23%;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(91, 91, 129);
+    margin: 10px;
+
+    
+}
+#btns1:hover{
+    color: blue;
+}
+#btns2{
+    width: 23%;
+    padding: 10px 20px;
+    color: rgb(91, 91, 129);
+    border: 1px solid rgb(91, 91, 129);
+
+}
+#btns2:hover{
+    color: lightyellow;
+}
+
+
+#page2{
+    height: 90%;
+    width: 100%;
+    background-color: yellow;
+}
+
+
+
