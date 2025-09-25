@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherApp.css">
+    <!-- <script src="weatherApp.js"></script> -->
+    <link rel="stylesheet" href="https://icons8.com/icon/9447/pressure">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-input">
+            <div class="input-group">
+                <input type="text" name="" id="userLocation" placeholder="Search for places">
+                <select class="converter">
+                    <option value="oC">oC</option>
+                    <option value="oF">oF</option>
+                </select>
+                <i class="ri-search-line" onclick="finduserlocation()"></i>
+            </div>
+            <div class="weathericon"></div>
+            <h2 class="temperature"></h2>
+            <div class="feels-like"></div>
+            <div class="description"></div>
+            <hr>
+            <div class="date"></div>
+            <div class="city"></div>
+
+        </div>
+        <div class="weather-output">
+            <h2 class="heading">Today's Highlight</h2>
+            <div class="Highlights">
+                <div class="humidity">
+                    Humidity
+                    <i class="ri-water-percent-fill"></i>
+                    <h1 id="HValue"></h1>
+                </div>
+                <div class="wind-speed">
+                    Wind Speed
+                    <i class="ri-windy-line"></i>
+                    <h1 id="WValue"></h1>
+
+
+                </div>
+
+                <div class="Sun">
+                    <span>
+                        <i class="ri-sun-fill"></i>
+                        <p><span id="SRValue"></span>Sunrise</p>
+                    </span>
+                    <span>
+                        <i class="ri-sun-line"></i>
+                        <p><span id="SSValue"></span>Sunset</p>
+                    </span>
+                </div>
+
+                <div class="Clouds">
+                    Clouds
+                    <i class="ri-cloud-fill"></i>
+                    <h1 id="CValue"></h1>
+                </div>
+
+
+                <div class="uv-index">
+                    UV Index
+                    <i class="ri-sun-foggy-line"></i>
+                    <h1 id="UVValue"></h1>
+                </div>
+
+                <div class="Pressure">
+                    Pressure
+                    <i class="ri-timer-2-fill"></i>
+                    <h1 id="PValue"></h1>
+                </div>
+
+            </div>
+            <br>
+            <h2 class="heading">This Week</h2>
+            <div class="forecast"></div>
+        </div>
+    </div>
+    <script src="weatherApp.js"></script>
+</body>
+
+</html>
