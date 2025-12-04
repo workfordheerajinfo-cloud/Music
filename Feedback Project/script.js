@@ -8,6 +8,9 @@ let selectRating="Satisfied"
 ratingsContainer.addEventListener("click",e=>{
     if(e.target.parentNode.classList.contains("rating")){
         // console.log(e.target.parentNode.classList.contains("rating"))
+
+        // e.target
+    
         
         removeActive();
         e.target.parentNode.classList.add("active");
